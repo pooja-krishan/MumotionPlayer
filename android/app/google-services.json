@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "592492391897",
+    "project_id": "mumotionplayer",
+    "storage_bucket": "mumotionplayer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:592492391897:android:0b4a16e77d0e5547577dc8",
+        "android_client_info": {
+          "package_name": "com.example.mumotionplayer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "592492391897-5e8rj0r6gf5qpccat9n3mjveg6qte3c0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPQLrvSQmwhkCCBEt4kYRX_9TR5d37cCk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "592492391897-5e8rj0r6gf5qpccat9n3mjveg6qte3c0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
