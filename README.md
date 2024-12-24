@@ -21,8 +21,8 @@ A music player that plays music based on user emotion
 - GPS
 
 ## Software Requirements
-**OS:** Android 5.0 or above, iOS 
-**Web:** (Chrome/Edge)
+- **OS:** Android 5.0 or above, iOS 
+- **Web:** (Chrome/Edge)
 
 ## Tools used:
 - **IDE:** Android Studio, VS Code
@@ -48,13 +48,11 @@ A music player that plays music based on user emotion
 ![dl](./img/dl.png)
 
 # System Architecture
-![sys_arch](./img/sys_arch.png)
-
-In the right side of the figure above, the system is trained by preprocessing the image dataset before passing it to the Convolutional Neural Network model(s) to
+In the right side of the figure below, the system is trained by preprocessing the image dataset before passing it to the Convolutional Neural Network model(s) to
 extract the essential features of the image. The knowledge gained in the training process is fed as input to the classifier which learns to predict for future image
-data. In the left side of figure 4.1, the input image is preprocessed to resemble the training dataset before feeding it to the face detection module which then extracts
-the essential features from the image and passes it as input to the classifier to perform classification. The tflite convertor is needed to convert the learned model
-into a file format which can be run by the tflite interpreter on mobile devices.
+data. In the left side of the figure below, the input image is preprocessed to resemble the training dataset before feeding it to the face detection module which then extracts the essential features from the image and passes it as input to the classifier to perform classification. The tflite convertor is needed to convert the learned model into a file format which can be run by the tflite interpreter on mobile devices.
+
+![sys_arch](./img/sys_arch.png)
 
 # Use-Case Diagram
 ![use_case](./img/use_case.png)
@@ -94,7 +92,7 @@ and plays famous songs available in the area. If the user chooses emotion mode, 
 available in the emotion detected playlist. The user also has the ability to completely customize their emotions playlist.
 
 # Dataset Description and Preprocessing
-The dataset used is fer2013.csv. It consists of 48*48-pixel grayscale images of faces. The faces have been categorised into one of seven categories (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral). Scikit learn’s train_test_split() function is used to split the dataset into training and testing data. 20% is used for testing while 80% is used for training. The training set consists of 28,709 examples. The test set consists of 3589 examples. The dataset consists of three columns - emotions, pixels and purpose. If the pixel values are in the range of (0-255), computational complexity will be high. So, the data in the pixel field is normalized to values between [0-1]. From the graph in figure 5.1, we see that the dataset is imbalanced, with disgust consisting of just 547 images. So, more data is generated using the training set by rotating, cropping, flipping and normalizing the actual training images. An example of horizontal flipping is shown in figure 5.2. Vertical
+The dataset used is fer2013.csv. It consists of 48*48-pixel grayscale images of faces. The faces have been categorised into one of seven categories (0=Angry, 1=Disgust, 2=Fear, 3=Happy, 4=Sad, 5=Surprise, 6=Neutral). Scikit learn’s train_test_split() function is used to split the dataset into training and testing data. 20% is used for testing while 80% is used for training. The training set consists of 28,709 examples. The test set consists of 3589 examples. The dataset consists of three columns - emotions, pixels and purpose. If the pixel values are in the range of (0-255), computational complexity will be high. So, the data in the pixel field is normalized to values between [0-1]. The dataset is imbalanced, with disgust consisting of just 547 images. So, more data is generated using the training set by rotating, cropping, flipping and normalizing the actual training images. An example of horizontal flipping is shown in figure 5.2. Vertical
 flipping confuses the CNN and reduces its accuracy and hence it is not used.
 
 # Deep Learning Models Used and Evaluation
